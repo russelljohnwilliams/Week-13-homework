@@ -17,10 +17,21 @@ public class Basket{
 
   public void addItemToBasket(Product product){
     this.basket.add(product);
-
   }
 
-  
+  public int getIndexOfItemInBasket(Product product){
+    for (Product item : basket) {
+      if (item.getProductDescription() == product.getProductDescription()) {
+        return basket.indexOf(item);
+      }
+    }
+    return -1;
+  }
+
+  // public void removeItemFromBasket(Product product){
+  //   int index = getIndexOfItemInBasket(product);
+  //   basket.remove(index);
+  // }
 
 
 }

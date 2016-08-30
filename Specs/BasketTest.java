@@ -27,6 +27,13 @@ public class BasketTest {
     assertEquals(1, basket.countBasketContents());
   }
 
-  
+  @Test
+  public void findIndexOfItemInBasket(){
+    basket.addItemToBasket(item2);
+    basket.addItemToBasket(item3);
+    basket.addItemToBasket(item1);
+    assertEquals(3, basket.countBasketContents());
+    assertEquals(1, basket.getIndexOfItemInBasket(item3));
+  }
 
 }

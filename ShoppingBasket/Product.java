@@ -4,21 +4,21 @@ import java.util.*;
 
 public class Product{
 
-  private String product;
+  private String description;
   private String id;
   private double price;
 
 
-  public Product(String product, String id, double price){
+  public Product(String description, String id, double price){
 
-    this.product = product;
+    this.description = description;
     this.id = id;
     this.price = price; 
 
   }
 
   public String getProductDescription(){
-    return this.product;
+    return this.description;
   }
 
   public String getProductId(){
