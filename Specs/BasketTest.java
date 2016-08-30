@@ -18,22 +18,26 @@ public class BasketTest {
     item2 = new Product("DVD", "full price", 9.99);
     item3 = new Product("LP", "bogof", 24.99);
     basket = new Basket();
-  }
-
-
-  @Test
-  public void canAddItemToBasket(){
-    basket.addItemToBasket(item1);
-    assertEquals(1, basket.countBasketContents());
-  }
-
-  @Test
-  public void findIndexOfItemInBasket(){
     basket.addItemToBasket(item2);
     basket.addItemToBasket(item3);
     basket.addItemToBasket(item1);
+  }
+
+  @Test
+  public void canAddItemToBasket(){
     assertEquals(3, basket.countBasketContents());
+  }
+
+  @Test
+  public void canFindIndexOfItemInBasket(){
     assertEquals(1, basket.getIndexOfItemInBasket(item3));
+  }
+
+  @Test
+  public void CanRemoveItemFromBasket(){
+    basket.removeItemFromBasket(item3);
+    assertEquals(2, basket.countBasketContents());
+    assertEquals(-1, basket.getIndexOfItemInBasket(item3));
   }
 
 }

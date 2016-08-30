@@ -28,10 +28,10 @@ public class Basket{
     return -1;
   }
 
-  // public void removeItemFromBasket(Product product){
-  //   int index = getIndexOfItemInBasket(product);
-  //   basket.remove(index);
-  // }
+  public void removeItemFromBasket(Product product){
+    int index = getIndexOfItemInBasket(product);
+    basket.remove(index);
+  }
 
 
 }
