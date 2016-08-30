@@ -33,5 +33,10 @@ public class Basket{
     basket.remove(index);
   }
 
+  public void removeAllItems(){
+    basket.clear();
+    // O(n) !!!
+  }
+
 
 }

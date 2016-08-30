@@ -40,4 +40,10 @@ public class BasketTest {
     assertEquals(-1, basket.getIndexOfItemInBasket(item3));
   }
 
+  @Test
+  public void canEmptyAllItemsFromTheBasket(){
+    basket.removeAllItems();
+    assertEquals(0, basket.countBasketContents());
+  }
+
 }
