@@ -9,16 +9,11 @@ public class CDTest {
   CD item1;
   CD item2;
 
-  // Product item2;
-  // Product item3;
 
   @Before
   public void before(){
     item1 = new CD("Neil Young", "After The Goldrush", "budget", 4.99);
     item2 = new CD("Bobby Conn", "The Golden Age", "bogof", 9.99);
-
-    // item2 = new Product("DVD", "full price", 9.99);
-    // item3 = new Product("LP", "bogof", 24.99);
   }
 
   @Test
