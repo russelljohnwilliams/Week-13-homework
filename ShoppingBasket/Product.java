@@ -2,23 +2,20 @@ package ShoppingBasket;
 import ShoppingBasket.*;
 import java.util.*;
 
-public class Product{
+public abstract class Product{
 
-  private String description;
-  private String id;
-  private double price;
+  protected String artist;
+  protected String title;
+  protected String id;
+  protected double price;
 
 
-  public Product(String description, String id, double price){
-
-    this.description = description;
-    this.id = id;
-    this.price = price; 
-
+  public String getProductArtist(){
+    return this.artist;
   }
 
-  public String getProductDescription(){
-    return this.description;
+  public String getProductTitle(){
+    return this.title;
   }
 
   public String getProductId(){

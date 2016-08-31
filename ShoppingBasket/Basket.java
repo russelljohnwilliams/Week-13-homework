@@ -21,7 +21,7 @@ public class Basket{
 
   public int getIndexOfItemInBasket(Product product){
     for (Product item : basket) {
-      if (item.getProductDescription() == product.getProductDescription()) {
+      if (item.getProductTitle() == product.getProductTitle()) {
         return basket.indexOf(item);
       }
     }
@@ -35,7 +35,6 @@ public class Basket{
 
   public void removeAllItems(){
     basket.clear();
-    // O(n) !!!
   }
 
 
