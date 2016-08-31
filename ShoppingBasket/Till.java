@@ -4,24 +4,32 @@ import java.util.*;
 
 public class Till{
 
-  private double money;
+  private Double money;
+  // private  prices;
+  private ArrayList<Product> basket;
 
-
-  public Till(double money){
-
+  public Till(Double money){
     this.money = money;
 
+    basket = new ArrayList<Product>();
   }
 
-  // public float bogof(){
-  //   // check id of shopping item
-  //   // for each two that match
-  //   // check their prices against each other
-  //   // lowest price is free
-  //   return ;
-  // }
+  public double executeBogofDeal(){
+    ArrayList<Double> prices = new ArrayList<Double>();
+    for (Product item : basket) {
+      if (item.getProductId() == "bogof") {
+        prices.add(item.getProductPrice());
+        Collections.sort(prices);
+        prices.remove(0);
+        return prices.get(0);
+        }
+      }
+    return 0;
+  }
 
-  // // public float tenPercentDiscount(){
+  // public float tenPercentDiscount(){
+
+
   //   // check for Bogof()
   //   // then total all the Shopping items (another function)
   //   // deduct 10%
