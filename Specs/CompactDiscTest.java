@@ -4,16 +4,16 @@ import org.junit.*;
 import ShoppingBasket.*;
 import java.util.*;
 
-public class CDTest {
+public class CompactDiscTest {
 
-  CD item1;
-  CD item2;
+  CompactDisc item1;
+  CompactDisc item2;
 
 
   @Before
   public void before(){
-    item1 = new CD("Neil Young", "After The Goldrush", "budget", 4.99);
-    item2 = new CD("Bobby Conn", "The Golden Age", "bogof", 9.99);
+    item1 = new CompactDisc("Neil Young", "After The Goldrush", "budget", 4.99);
+    item2 = new CompactDisc("Bobby Conn", "The Golden Age", "bogof", 9.99);
   }
 
   @Test

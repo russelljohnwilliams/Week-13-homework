@@ -4,16 +4,16 @@ import org.junit.*;
 import ShoppingBasket.*;
 import java.util.*;
 
-public class LPTest {
+public class VinylTest {
 
-  LP item1;
-  LP item2;
+  Vinyl item1;
+  Vinyl item2;
 
 
   @Before
   public void before(){
-    item1 = new LP("Miles Davis", "Sketches of Spain", "full", 13.99, "180gm");
-    item2 = new LP("Divine Comedy", "Casanova", "bogof", 15.99, "undefined");
+    item1 = new Vinyl("Miles Davis", "Sketches of Spain", "full", 13.99, "180gm");
+    item2 = new Vinyl("Divine Comedy", "Casanova", "bogof", 15.99, "undefined");
   }
 
   @Test

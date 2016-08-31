@@ -2,11 +2,11 @@ package ShoppingBasket;
 import ShoppingBasket.*;
 import java.util.*;
 
-public class LP extends Product{
+public class Vinyl extends Product{
 
   private String weight;
 
-  public LP(String artist, String title, String id, double price, String weight){
+  public Vinyl(String artist, String title, String id, double price, String weight){
     this.artist = artist;
     this.title = title;
     this.id = id;
