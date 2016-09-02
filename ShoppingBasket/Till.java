@@ -5,20 +5,19 @@ import java.util.*;
 public class Till{
 
   private Double money;
-  // private  prices;
   private ArrayList<Product> basket;
 
   public Till(Double money){
     this.money = money;
-
     basket = new ArrayList<Product>();
   }
 
   public double executeBogofDeal(){
-    ArrayList<Double> prices = new ArrayList<Double>();
+    
     for (Product item : basket) {
       if (item.getProductId() == "bogof") {
-        prices.add(item.getProductPrice());
+        double value = item.getProductPrice();
+        prices.add(value);
         Collections.sort(prices);
         prices.remove(0);
         return prices.get(0);
@@ -28,8 +27,6 @@ public class Till{
   }
 
   // public float tenPercentDiscount(){
-
-
   //   // check for Bogof()
   //   // then total all the Shopping items (another function)
   //   // deduct 10%
