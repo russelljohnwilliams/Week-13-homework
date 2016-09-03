@@ -75,7 +75,17 @@ public class TillTest {
     till.subTotal(basket.getBasket());
     till.tenPercentDiscount(basket.getBasket());
     assertEquals(31.47, till.countMoneyInTill(), 0.01);
+  }
 
+  @Test
+  public void canDeductLoyaltyCardDiscount(){
+    basket.addItemToBasket(item1);
+    basket.addItemToBasket(item2);
+    basket.addItemToBasket(item3);
+    basket.addItemToBasket(item4);
+    till.subTotal(basket.getBasket());
+    till.twoPercentDiscount(basket.getBasket(), basket);
+    assertEquals(30.84, till.countMoneyInTill(), 0.01);
   }
 
   

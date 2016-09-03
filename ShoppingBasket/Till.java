@@ -5,31 +5,32 @@ import java.util.*;
 public class Till{
 
   private Double money;
-// private ArrayList<Product> basket;
 
   public Till(Double money){
     this.money = money;
-  // basket = new ArrayList<Product>();
   }
+
 
   public double countMoneyInTill(){
     return this.money;
   }
 
-  public void subTotal(ArrayList<Product> basket){
+
+  public void subTotal(ArrayList<Product> item){
     ArrayList<Double> prices = new ArrayList<Double>(); 
-    for (Product item : basket) {
-      this.money += item.getProductPrice();
+    for (Product items : item) {
+      this.money += items.getProductPrice();
     }
   }
 
-  public void executeBogofDeal(ArrayList<Product> basket){
+
+  public void executeBogofDeal(ArrayList<Product> item){
     ArrayList<Double> prices = new ArrayList<Double>(); 
-    for (Product item : basket) {
-      String productId = item.getProductId();
+    for (Product items : item) {
+      String productId = items.getProductId();
       if (productId.equals("bogof")) 
       {
-        double productPrice = item.getProductPrice();
+        double productPrice = items.getProductPrice();
         prices.add(productPrice);
       }
     } 
@@ -41,8 +42,8 @@ public class Till{
   }
 
 
-  public void tenPercentDiscount(ArrayList<Product> basket){
-    executeBogofDeal(basket);
+  public void tenPercentDiscount(ArrayList<Product> item){
+    executeBogofDeal(item);
     double discount = this.money;
     if (this.money >= 20.00){
       double ten = discount / 100 * 10;
@@ -50,11 +51,15 @@ public class Till{
     }
   }
 
-// // public float twoPercentDiscount(){
-//   // check for Bogof(), then TenPercent()
-//   // get total
-//   // deduct 2%
-// return ;
-// }
+
+  public void twoPercentDiscount(ArrayList<Product> item, Basket basket){
+    tenPercentDiscount(item);
+    String loyaltyCard = basket.getLoyaltyCard();
+    if (loyaltyCard.equals("loyal")){
+      double discount = this.money;
+      double loyalty = discount / 100 * 2;
+      this.money -= loyalty;
+    }
+  }
 
 }

@@ -16,6 +16,10 @@ public class Basket{
     return this.basket;
   }
 
+  public String getLoyaltyCard(){
+    return this.loyaltyCard;
+  }
+
   public int countBasketContents(){
     return this.basket.size();
   }
