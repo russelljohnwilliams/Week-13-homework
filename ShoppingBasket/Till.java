@@ -5,44 +5,56 @@ import java.util.*;
 public class Till{
 
   private Double money;
-  // private ArrayList<Product> basket;
+// private ArrayList<Product> basket;
 
   public Till(Double money){
     this.money = money;
-    // basket = new ArrayList<Product>();
+  // basket = new ArrayList<Product>();
   }
 
-  public double executeBogofDeal(ArrayList<Product> basket){
+  public double countMoneyInTill(){
+    return this.money;
+  }
+
+  public void subTotal(ArrayList<Product> basket){
+    ArrayList<Double> prices = new ArrayList<Double>(); 
+    for (Product item : basket) {
+      this.money += item.getProductPrice();
+    }
+  }
+
+  public void executeBogofDeal(ArrayList<Product> basket){
     ArrayList<Double> prices = new ArrayList<Double>(); 
     for (Product item : basket) {
       String productId = item.getProductId();
-      if (productId.equals("bogof")) {
-        double value = item.getProductPrice();
-        prices.add(value);
+      if (productId.equals("bogof")) 
+      {
+        double productPrice = item.getProductPrice();
+        prices.add(productPrice);
       }
-        Collections.sort(prices);
-        return prices.get(0);
-      }
-    return 0.0;
+    } 
+    Collections.sort(prices);
+    for (int i = 0; i < prices.size() / 2; i++)
+    {
+      this.money -= prices.get(i);
+    }
   }
 
-  // loop through 'prices'
-  // if the number is devisible by two &&  there is more than
-  // use that number to return the amount of discounts to apply
 
+public void tenPercentDiscount(){
+  // till.executeBogofDeal(ArrayList<Product> basket)
+double discount = this.money;
+if (this.money >= 20.00){
+double ten = discount / 100 * 10;
+this.money -= ten;
+}
+}
 
-  // public float tenPercentDiscount(){
-  //   // check for Bogof()
-  //   // then total all the Shopping items (another function)
-  //   // deduct 10%
-  // return ;
-  // }
-
-  // // public float twoPercentDiscount(){
-  //   // check for Bogof(), then TenPercent()
-  //   // get total
-  //   // deduct 2%
-  // return ;
-  // }
+// // public float twoPercentDiscount(){
+//   // check for Bogof(), then TenPercent()
+//   // get total
+//   // deduct 2%
+// return ;
+// }
 
 }

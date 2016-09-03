@@ -17,7 +17,7 @@ public class BasketTest {
     item2 = new Vinyl("Miles Davis", "Sketches of Spain", "full", 13.99, "180gm");
     item3 = new Vinyl("Divine Comedy", "Casanova", "bogof", 15.99, "undefined");
     
-    basket = new Basket();
+    basket = new Basket("loyal");
     
     basket.addItemToBasket(item2);
     basket.addItemToBasket(item3);

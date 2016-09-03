@@ -7,7 +7,7 @@ public class Basket{
   private ArrayList<Product> basket;
   private String loyaltyCard;
 
-  public Basket(){
+  public Basket(String loyaltyCard){
     this.basket = new ArrayList<Product>();
     this.loyaltyCard = loyaltyCard;
   }

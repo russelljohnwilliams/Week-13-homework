@@ -2,7 +2,7 @@
 
 // public interface Discountable{
 
-//   public Double addDiscount();
+//   public Double applyDiscount();
 
 // }
 
