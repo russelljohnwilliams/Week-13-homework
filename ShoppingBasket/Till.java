@@ -5,26 +5,31 @@ import java.util.*;
 public class Till{
 
   private Double money;
-  private ArrayList<Product> basket;
+  // private ArrayList<Product> basket;
 
   public Till(Double money){
     this.money = money;
-    basket = new ArrayList<Product>();
+    // basket = new ArrayList<Product>();
   }
 
-  public double executeBogofDeal(){
-    
+  public double executeBogofDeal(ArrayList<Product> basket){
+    ArrayList<Double> prices = new ArrayList<Double>(); 
     for (Product item : basket) {
-      if (item.getProductId() == "bogof") {
+      String productId = item.getProductId();
+      if (productId.equals("bogof")) {
         double value = item.getProductPrice();
         prices.add(value);
-        Collections.sort(prices);
-        prices.remove(0);
-        return prices.get(0);
-        }
       }
-    return 0;
+        Collections.sort(prices);
+        return prices.get(0);
+      }
+    return 0.0;
   }
+
+  // loop through 'prices'
+  // if the number is devisible by two &&  there is more than
+  // use that number to return the amount of discounts to apply
+
 
   // public float tenPercentDiscount(){
   //   // check for Bogof()

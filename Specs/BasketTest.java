@@ -25,6 +25,11 @@ public class BasketTest {
   }
 
   @Test
+  public void canGetBasket(){
+    assertEquals(3, basket.getBasket().size());
+  }
+
+  @Test
   public void canAddItemToBasket(){
     assertEquals(3, basket.countBasketContents());
   }

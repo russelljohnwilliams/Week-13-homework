@@ -5,10 +5,15 @@ import java.util.*;
 public class Basket{
 
   private ArrayList<Product> basket;
-
+  private String loyaltyCard;
 
   public Basket(){
     this.basket = new ArrayList<Product>();
+    this.loyaltyCard = loyaltyCard;
+  }
+
+  public ArrayList<Product> getBasket(){
+    return this.basket;
   }
 
   public int countBasketContents(){

@@ -25,9 +25,9 @@ public class TillTest {
 
   @Test
   public void canDeductBogofTitle(){
-    basket.addItemToBasket(item4);
     basket.addItemToBasket(item2);
-    assertEquals(15.99, till.executeBogofDeal(), 0.01);
+    basket.addItemToBasket(item4);
+    assertEquals(9.99, till.executeBogofDeal(basket.getBasket()), 0.01);
   }
 
 
