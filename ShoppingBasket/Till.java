@@ -41,14 +41,14 @@ public class Till{
   }
 
 
-public void tenPercentDiscount(){
-  // till.executeBogofDeal(ArrayList<Product> basket)
-double discount = this.money;
-if (this.money >= 20.00){
-double ten = discount / 100 * 10;
-this.money -= ten;
-}
-}
+  public void tenPercentDiscount(ArrayList<Product> basket){
+    executeBogofDeal(basket);
+    double discount = this.money;
+    if (this.money >= 20.00){
+      double ten = discount / 100 * 10;
+      this.money -= ten;
+    }
+  }
 
 // // public float twoPercentDiscount(){
 //   // check for Bogof(), then TenPercent()

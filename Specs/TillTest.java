@@ -73,8 +73,8 @@ public class TillTest {
     basket.addItemToBasket(item3);
     basket.addItemToBasket(item4);
     till.subTotal(basket.getBasket());
-    till.tenPercentDiscount();
-    assertEquals(40.46, till.countMoneyInTill(), 0.01);
+    till.tenPercentDiscount(basket.getBasket());
+    assertEquals(31.47, till.countMoneyInTill(), 0.01);
 
   }
 
