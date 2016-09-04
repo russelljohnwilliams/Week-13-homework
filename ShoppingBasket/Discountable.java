@@ -1,8 +1,10 @@
 // package ShoppingBasket;
+// import ShoppingBasket.*;
+// import java.util.*;
 
 // public interface Discountable{
 
-//   public Double applyDiscount();
+//   public void applyDiscount(ArrayList<Product> item, Till till);
 
 // }
 

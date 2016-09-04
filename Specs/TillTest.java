@@ -1,3 +1,4 @@
+
 import static org.junit.Assert.*;
 import org.junit.*;
 
@@ -31,7 +32,7 @@ public class TillTest {
     basket.addItemToBasket(item2);
     basket.addItemToBasket(item4);
     till.subTotal(basket.getBasket());
-    assertEquals(25.98, till.countMoneyInTill(), 0.01);
+    assertEquals(25.98, till.getTill(), 0.01);
   }
 
 
@@ -41,8 +42,8 @@ public class TillTest {
     basket.addItemToBasket(item4);
     basket.addItemToBasket(item5);
     till.subTotal(basket.getBasket());
-    till.executeBogofDeal(basket.getBasket());
-    assertEquals(26.98,  till.countMoneyInTill(), 0.01);
+    till.bogofDiscount(basket.getBasket());
+    assertEquals(26.98, till.getTill(), 0.01);
   }
 
   @Test
@@ -52,8 +53,8 @@ public class TillTest {
     basket.addItemToBasket(item4);
     basket.addItemToBasket(item5);
     till.subTotal(basket.getBasket());
-    till.executeBogofDeal(basket.getBasket());
-    assertEquals(30.98,  till.countMoneyInTill(), 0.01);
+    till.bogofDiscount(basket.getBasket());
+    assertEquals(30.98,  till.getTill(), 0.01);
   }
 
   @Test
@@ -62,8 +63,8 @@ public class TillTest {
     basket.addItemToBasket(item2);
     basket.addItemToBasket(item3);
     till.subTotal(basket.getBasket());
-    till.executeBogofDeal(basket.getBasket());
-    assertEquals(18.98, till.countMoneyInTill(), 0.01);
+    till.bogofDiscount(basket.getBasket());
+    assertEquals(18.98, till.getTill(), 0.01);
   }
 
   @Test
@@ -74,7 +75,7 @@ public class TillTest {
     basket.addItemToBasket(item4);
     till.subTotal(basket.getBasket());
     till.tenPercentDiscount(basket.getBasket());
-    assertEquals(31.47, till.countMoneyInTill(), 0.01);
+    assertEquals(31.47, till.getTill(), 0.01);
   }
 
   @Test
@@ -85,7 +86,7 @@ public class TillTest {
     basket.addItemToBasket(item4);
     till.subTotal(basket.getBasket());
     till.twoPercentDiscount(basket.getBasket(), basket);
-    assertEquals(30.84, till.countMoneyInTill(), 0.01);
+    assertEquals(30.84, till.getTill(), 0.01);
   }
 
   

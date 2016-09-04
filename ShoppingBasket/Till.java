@@ -1,3 +1,4 @@
+
 package ShoppingBasket;
 import ShoppingBasket.*;
 import java.util.*;
@@ -11,7 +12,7 @@ public class Till{
   }
 
 
-  public double countMoneyInTill(){
+  public double getTill(){
     return this.money;
   }
 
@@ -24,7 +25,7 @@ public class Till{
   }
 
 
-  public void executeBogofDeal(ArrayList<Product> item){
+  public void bogofDiscount(ArrayList<Product> item){
     ArrayList<Double> prices = new ArrayList<Double>(); 
     for (Product items : item) {
       String productId = items.getProductId();
@@ -43,7 +44,7 @@ public class Till{
 
 
   public void tenPercentDiscount(ArrayList<Product> item){
-    executeBogofDeal(item);
+    bogofDiscount(item);
     double discount = this.money;
     if (this.money >= 20.00){
       double ten = discount / 100 * 10;

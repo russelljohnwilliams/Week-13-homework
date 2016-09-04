@@ -1,21 +1,26 @@
 // package ShoppingBasket;
+// import ShoppingBasket.*;
+// import java.util.*;
 
-// public class Bogof implements discountable{
+// public class BogofDiscount implements Discountable{
 
-
-//   public Double applyDiscount(ArrayList<Product> basket){
+//   public void applyDiscount(ArrayList<Product> item, Till till){
+    
 //     ArrayList<Double> prices = new ArrayList<Double>(); 
-//     for (Product item : basket) {
-//       String productId = item.getProductId();
-//       if (productId.equals("bogof")) {
-//         double value = item.getProductPrice();
-//         prices.add(value);
+//     for (Product items : item) {
+//       String productId = items.getProductId();
+//       if (productId.equals("bogof")) 
+//       {
+//         double productPrice = items.getProductPrice();
+//         prices.add(productPrice);
 //       }
-//       Collections.sort(prices);
-//       return prices.get(0);
+//     } 
+//     Collections.sort(prices);
+//     for (int i = 0; i < prices.size() / 2; i++)
+//     {
+//       Double money = till.getTill();
+//       money -= prices.get(i);
+//       till.setTill(money);
 //     }
-//     return 0.0;
 //   }
-
 // }
-
